@@ -50,18 +50,5 @@ function createElement(...input){
 		tableBody.appendChild(tr); // will append the table row to the table row
 
 	}
-	// let tdName1 =document.createElement("td");  // creates a new table data
-	// let tdName2 =document.createElement("td");  // creates a new table data
-	// let tdName3 =document.createElement("td");  // creates a new table data
-
-	// tdName1.appendChild(document.createTextNode(mountain.value));
-	// tdName2.appendChild(document.createTextNode(height.value));
-	// tdName3.appendChild(document.createTextNode(location.value)); // adds text node to tdName
-
-	// tr.appendChild(tdName1)
-	// tr.appendChild(tdName2)
-	// tr.appendChild(tdName3) // adds the table data to the table row
-	// tableBody.appendChild(tr) // adds the newly created and updated tabled row to the table body
-
 }
 		

@@ -29,25 +29,39 @@ function popUp(e){
 
 //Creating the new mountain
 function createMountain(e){
-	let tr = document.createElement("tr"); // creates a new table row
-	createElement(name);
-	createElement(elevation);
-	createElement(place);
+	createElement(name,elevation,place);
 
 
-	e.preventDefault();
+
+	
 
 }
 
 //FUCNTION THAT GETS CALLED BY CREATE ELEMENT
-function createElement(mountain){
-	//this function will be called everytime a new mountain is created 
+function createElement(...input){
+// this function will create one table row and will append table data to it, depending on ...input
+	let tr = document.createElement("tr"); // creates a new table row. only needs to be created once
+	console.log('the tr has been created');
+	for (let i of input){
+		console.log('inside the for loop')
+		let tdName1 =document.createElement("td"); // creates a table data
+		tdName1.appendChild(document.createTextNode(i.value)); // creates can appends the value to the table data
+		tr.appendChild(tdName1); // appends the created table data to the table row
+		tableBody.appendChild(tr); // will append the table row to the table row
 
-	let tdName =document.createElement("td");  // creates a new table data
-	tdName.appendChild(document.createTextNode(mountain.value)); // adds text node to tdName
-	tr.appendChild(tdName) // adds the table data to the table row
-	tableBody.appendChild(tr) // adds the newly created and updated tabled row to the table body
+	}
+	// let tdName1 =document.createElement("td");  // creates a new table data
+	// let tdName2 =document.createElement("td");  // creates a new table data
+	// let tdName3 =document.createElement("td");  // creates a new table data
+
+	// tdName1.appendChild(document.createTextNode(mountain.value));
+	// tdName2.appendChild(document.createTextNode(height.value));
+	// tdName3.appendChild(document.createTextNode(location.value)); // adds text node to tdName
+
+	// tr.appendChild(tdName1)
+	// tr.appendChild(tdName2)
+	// tr.appendChild(tdName3) // adds the table data to the table row
+	// tableBody.appendChild(tr) // adds the newly created and updated tabled row to the table body
 
 }
-		
 		
